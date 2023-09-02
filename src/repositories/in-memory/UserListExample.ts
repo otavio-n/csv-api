@@ -22,4 +22,11 @@ export const userListExample: User[] = [
     country: "France",
     favorite_sport: "Tennis",
   },
+  {
+    id: "4",
+    name: "Fantine Richelieu",
+    city: "Paris",
+    country: "France",
+    favorite_sport: "Football",
+  },
 ];
