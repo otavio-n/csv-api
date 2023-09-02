@@ -1,11 +1,10 @@
 import { Router } from "express";
+import { findUsersFactory } from "../modules/find-users/FindUsersFactory";
 
 const routes = Router();
 
-routes.post("/api/files", (request, response) =>
-);
-
 routes.get("/api/users", (request, response) =>
+    findUsersFactory().handle(request, response)
 );
 
 export { routes };
