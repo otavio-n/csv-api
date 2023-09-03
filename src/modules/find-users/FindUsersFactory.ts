@@ -3,7 +3,7 @@ import { FindUsersController } from "./FindUsersController";
 import { FindUsersService } from "./FindUsersService";
 
 export const findUsersFactory = () => {
-  const usersRepository = new UsersRepositoryInMemory(); //TODO: sqlite
+  const usersRepository = new UsersRepositoryInMemory();
   const findUsers = new FindUsersService(usersRepository);
   const findUsersController = new FindUsersController(findUsers);
   return findUsersController;
