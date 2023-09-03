@@ -11,7 +11,12 @@ interface IUserBody {
 class CreateUserService {
   constructor(private usersRepository: IUsersRepository) {}
 
-  async execute({ name, city, country, favorite_sport }: IUserBody) {
+  async execute({
+    name,
+    city,
+    country,
+    favorite_sport,
+  }: IUserBody): Promise<User> {
     const userAlreadyExists = await this.usersRepository.exists(name);
 
     if (userAlreadyExists) {

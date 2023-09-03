@@ -18,6 +18,10 @@ class User {
     const user = new User({ name, city, country, favorite_sport });
     return user;
   }
+
+  static getProperties() {
+    return ["name", "city", "country", "favorite_sport"];
+  }
 }
 
 export { User };
